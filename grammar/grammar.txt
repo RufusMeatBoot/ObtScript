@@ -1,7 +1,7 @@
 program ::= (statement "\n")*
 
 statement ::= name "{" field* "}"
-           | "New_" name "{" field* "}"
+           | name "{" field* "}"
 
 field ::= type ":" name "=" value
 
