@@ -1,17 +1,27 @@
-program ::= (statement "\n")*
+<program> ::= <object_declaration>*
 
-statement ::= name "{" field* "}"
-           | name "{" field* "}"
+<object_declaration> ::= IDENTIFIER "{" <attribute_declaration>* "}"
 
-field ::= type ":" name "=" value
+<attribute_declaration> ::= <data_type> ":" IDENTIFIER "=" <value> ";"
+                          | <data_type> ":" IDENTIFIER "{" <attribute_declaration>* "}"
 
-type ::= "String" | "Int" | "Bool" | "Float" | name
+<data_type> ::= "String" | "Int" | "Bool" | "Float" | "List"
 
-value ::= string | number | "true" | "false" | name
+<value> ::= STRING_LITERAL | INTEGER_LITERAL | BOOLEAN_LITERAL | FLOAT_LITERAL | <list_literal> | <object_declaration>
 
-name ::= [a-zA-Z][a-zA-Z0-9_]*
+<list_literal> ::= "[" [<value> ("," <value>)*] "]"
 
-string ::= '"' [^"]* '"'
+IDENTIFIER ::= LETTER (LETTER | DIGIT)*
+STRING_LITERAL ::= "\"" (ESC | ~["\\"])* "\""
+INTEGER_LITERAL ::= DIGIT+
+BOOLEAN_LITERAL ::= "true" | "false"
+FLOAT_LITERAL ::= DIGIT+ ("." DIGIT*)? (("e" | "E") ("+" | "-")? DIGIT+)?
 
-number ::= "-"? [0-9]+ "." [0-9]+
-         | "-"? [0-9]+
+WHITESPACE ::= [ \t\n\r]*
+COMMENT ::= "/*" ~[\*]/ .*? "*/" WHITESPACE?
+
+ESC ::= "\\" (["\\/bfnrt"] | "u" HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT)
+UNICODE ::= HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+HEX_DIGIT ::= [0-9a-fA-F]
+LETTER ::= [a-zA-Z]
+DIGIT ::= [0-9]
