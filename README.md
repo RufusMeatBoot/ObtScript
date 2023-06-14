@@ -27,8 +27,8 @@
 
 # Putting it all Together
 > ```
-> object {
->    new_object {
+> newObject {
+>    nestedObject1 {
 >        Int: x = 1
 >        String: h = "hello world"
 >        Bool: y = true
@@ -40,7 +40,7 @@
 >            two = 2
 >        }
 >    }
->    nested_object_2 {
+>    nestedObject2 {
 >        Int: x = new_object.x
 >        String: h = new_object.h
 >        Bool: y = new_object.y
