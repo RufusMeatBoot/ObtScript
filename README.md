@@ -26,15 +26,15 @@
 > - Objects can inherit values from other objects
 
 # Putting it all Together
-> `object {`
-> `   new_object {`
-> `       Int: x = 1`
-> `       String: h = "hello world"`
-> `       Bool: y = true`
-> `       Float: i = 2.9`
-> `       Char: o = "p"`
-> `       Arr: j = [1, 2, 3, 4]`
-> `       Enum: g = {
+> `object {
+>    new_object {
+>        Int: x = 1
+>        String: h = "hello world"
+>        Bool: y = true
+>        Float: i = 2.9
+>        Char: o = "p"
+>        Arr: j = [1, 2, 3, 4]
+>        Enum: g = {
 >            one = 1
 >            two = 2
 >        }
