@@ -26,7 +26,8 @@
 > - Objects can inherit values from other objects
 
 # Putting it all Together
-> `object {
+> ```
+> object {
 >    new_object {
 >        Int: x = 1
 >        String: h = "hello world"
@@ -48,4 +49,5 @@
 >        Arr: j = new_object.j
 >        Enum: g = new_object.g
 >    }
-> }`
+> }
+> ```
