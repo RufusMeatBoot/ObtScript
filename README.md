@@ -35,10 +35,10 @@
 >        Float: i = 2.9
 >        Char: o = "p"
 >        Arr: j = [1, 2, 3, 4]
->        Enum: g = {
+>        Enum: g = [
 >            one = 1
 >            two = 2
->        }
+>        ]
 >    }
 >    nestedObject2 {
 >        Int: x = new_object.x
