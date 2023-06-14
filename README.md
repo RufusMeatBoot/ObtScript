@@ -6,5 +6,5 @@
 
 # Examples
 > **Creating an Object**
-> - Objects are extremely simple to create
-> `yourObject {}`
+> - Objects are as simple as `yourObject {}`
+
