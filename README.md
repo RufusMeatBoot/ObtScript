@@ -26,7 +26,7 @@
 > - Objects can inherit values from other objects
 
 # Putting it all Together
-> `` an object with two nested objects, one of which inherits values from a different object
+> `` an object with two nested objects, one of which inherits values from a different object`
 
 object {
     new_object {
