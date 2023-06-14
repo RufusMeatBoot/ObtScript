@@ -13,4 +13,10 @@
 > - Values can be added to objects by first declaring their type, followed by their values, such as `Int: x = 4`
 >
 > **Supported Datatypes**
-> -
+> - Integers
+> - Floating Points
+> - Booleans
+> - Strings
+> - Characters
+> - Enumerated Lists
+> - Arrays
