@@ -6,5 +6,5 @@
 
 # Examples
 > **Creating an Object**
-> - Objects are as simple as `yourObject {}`
+> - Objects are as simple as defining an object name, followed by the contents of your object, such as `yourObject {}`
 
