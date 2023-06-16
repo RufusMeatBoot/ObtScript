@@ -25,7 +25,7 @@
 > - Objects can be nested within other objects, known as `parent` and `child` objects.
 > - Objects can inherit values from other objects
 
-# Putting it all Together
+# Putting it All Together
 > ```
 > newObject {
 >    nestedObject1 {
