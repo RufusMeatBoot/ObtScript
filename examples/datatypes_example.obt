@@ -14,12 +14,12 @@ newObject {
        ]
    }
    nestedObject2 {
-       Int: x = new_object.x
-       String: h = new_object.h
-       Bool: y = new_object.y
-       Float: i = new_object.i
-       Char: 0 = new_object.object.o
-       Arr: j = new_object.j
-       Enum: g = new_object.g
+       Int: x = newObject.x
+       String: h = newObject.h
+       Bool: y = newObject.y
+       Float: i = newObject.i
+       Char: 0 = newObject.object.o
+       Arr: j = newObject.j
+       Enum: g = newObject.g
    }
 }
