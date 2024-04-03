@@ -17,8 +17,7 @@
 > - Floating Points
 > - Booleans
 > - Strings
-> - Characters
-> - Enumerated Lists
+> - Single Characters
 > - Arrays
 
 > **More Information**
@@ -35,19 +34,14 @@
 >        Float: i = 2.9
 >        Char: o = "p"
 >        Arr: j = [1, 2, 3, 4]
->        Enum: g = [
->            one = 1
->            two = 2
->        ]
 >    }
 >    nestedObject2 {
->        Int: x = new_object.x
->        String: h = new_object.h
->        Bool: y = new_object.y
->        Float: i = new_object.i
->        Char: 0 = new_object.object.o
->        Arr: j = new_object.j
->        Enum: g = new_object.g
+>        Int: x = newObject.nestedObject1.x
+>        String: h = newObject.nestedObject1.h
+>        Bool: y = newObject.nestedObject1.y
+>        Float: i = newObject.nestedObject1.i
+>        Char: 0 = newObject.nestedObject1.o
+>        Arr: j = newObject.nestedObject1.j
 >    }
 > }
 > ```
