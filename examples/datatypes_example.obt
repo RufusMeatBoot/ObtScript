@@ -8,10 +8,6 @@ newObject {
        Float: i = 2.9
        Char: o = "p"
        Arr: j = [1, 2, 3, 4]
-       Enum: g = [
-           one = 1
-           two = 2
-       ]
    }
    nestedObject2 {
        Int: x = newObject.nestedObject1.x
@@ -20,6 +16,5 @@ newObject {
        Float: i = newObject.nestedObject1.i
        Char: 0 = newObject.nestedObject1.o
        Arr: j = newObject.nestedObject1.j
-       Enum: g = newObject.nestedObject1.g
    }
 }
