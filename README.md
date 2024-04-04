@@ -17,7 +17,6 @@
 > - Floating Points
 > - Booleans
 > - Strings
-> - Single Characters
 > - Arrays
 
 > **More Information**
@@ -32,7 +31,6 @@
 >        String: h = "hello world"
 >        Bool: y = true
 >        Float: i = 2.9
->        Char: o = "p"
 >        Arr: j = [1, 2, 3, 4]
 >    }
 >    nestedObject2 {
@@ -40,7 +38,6 @@
 >        String: h = newObject.nestedObject1.h
 >        Bool: y = newObject.nestedObject1.y
 >        Float: i = newObject.nestedObject1.i
->        Char: 0 = newObject.nestedObject1.o
 >        Arr: j = newObject.nestedObject1.j
 >    }
 > }
