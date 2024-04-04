@@ -10,7 +10,7 @@
 > - Objects are as simple as defining an object name, followed by the contents of your object, such as `yourObject {}`
 
 > **Declaring Values Inside Objects**
-> - Values can be added to objects by first declaring their type, followed by their values, such as `Int: x = 4`
+> - Values can be added to objects by first declaring their name, followed by their values, such as `x : 4`
 
 > **Supported Datatypes**
 > - Integers
