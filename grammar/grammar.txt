@@ -1,33 +1,37 @@
-# Grammar for ObtScript
+<object> ::= <object_name> "{" <object_contents> "}"
 
-# Definitions
+<nested_object> ::= "nested_object_name" "{" <nested_object_contents> "}"
 
-<program> ::= <object_definition>+
+<property> ::= <identifier> ":" <value>
 
-<object_definition> ::= ID <object_body>
+<value> ::= <primitive_value> | "[" <array_values> "]"
 
-<object_body> ::= INDENT <property_definition>+ DEDENT
+<primitive_value> ::= <integer> | <string> | <boolean> | <float>
 
-<property_definition> ::= TYPE ':' ID '=' <value>
+<integer> ::= "i_INT" ":" <integer_value>
 
-<value> ::= INT_VALUE | FLOAT_VALUE | BOOL_VALUE | STRING_VALUE | ARRAY_VALUE | REFERENCE
+<string> ::= "s_STR" ":" <string_value>
 
-# Terminals
+<boolean> ::= "b_BOOL" ":" <boolean_value>
 
-ID ::= [a-zA-Z_][a-zA-Z0-9_]*
-INT_VALUE ::= [0-9]+
-FLOAT_VALUE ::= [0-9]+ '.' [0-9]+
-BOOL_VALUE ::= 'true' | 'false'
-STRING_VALUE ::= '"' <string_content> '"'
-ARRAY_VALUE ::= '[' <array_content> ']'
-REFERENCE ::= ID '.' ID
+<float> ::= "f_FLOAT" ":" <float_value>
 
-# Helpers
+<array_values> ::= <primitive_value> <array_values_tail>
 
-<string_content> ::= [^"]*
-<array_content> ::= (<value> (',' <value>)*)?
+<array_values_tail> ::= "," <primitive_value> <array_values_tail> | ε
 
-# Indentation
+<identifier> ::= <identifier_part> <identifier_tail>
 
-INDENT ::= '    '
-DEDENT ::= ''
+<identifier_part> ::= [a-zA-Z_]
+
+<identifier_tail> ::= <identifier_part> | <integer>
+
+<integer_value> ::= [0-9]+
+
+<string_value> ::= "\"" <characters> "\""
+
+<characters> ::= <character> <characters> | ε
+
+<boolean_value> ::= "true" | "false"
+
+<float_value> ::= <integer_value> "." <integer_value>
