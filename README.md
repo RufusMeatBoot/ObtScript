@@ -83,7 +83,7 @@ OBJECT_NAME {
 
 ```
 ` Define the base configuration for a generic vehicle `
-VEHICLE_CONFIG {
+_VEHICLE_CONFIG {
     _BASE {
         brand: "Generic Motors"
         color: "Black"
@@ -93,13 +93,13 @@ VEHICLE_CONFIG {
 }
 
 ` Define a configuration for a car inheriting from the generic vehicle configuration `
-CAR_CONFIG {
+_CAR_CONFIG {
     _BASE {
         ` Inherit base properties from VEHICLE_CONFIG `
-        brand: $_CAR_CONFIG._BASE.brand
-        color: $_CAR_CONFIG._BASE.color
-        max_speed: $_CAR_CONFIG._BASE.max_speed
-        fuel_capacity: $_CAR_CONFIG._BASE.fuel_capacity
+        brand: $_VEHICLE_CONFIG._BASE.brand
+        color: $_VEHICLE_CONFIG._BASE.color
+        max_speed: $_VEHICLE_CONFIG._BASE.max_speed
+        fuel_capacity: $_VEHICLE_CONFIG._BASE.fuel_capacity
 
         ` Car-specific properties `
         num_doors: 4
@@ -108,13 +108,13 @@ CAR_CONFIG {
 }
 
 ` Define a configuration for a motorcycle inheriting from the generic vehicle configuration `
-MOTORCYCLE_CONFIG {
+_MOTORCYCLE_CONFIG {
     _BASE {
         ` Inherit base properties from VEHICLE_CONFIG `
-        brand: $_MOTORCYCLE_CONFIG._BASE.brand
-        color: $_MOTORCYCLE_CONFIG._BASE.color
-        max_speed: $_MOTORCYCLE_CONFIG._BASE.max_speed
-        fuel_capacity: $_MOTORCYCLE_CONFIG._BASE.fuel_capacity
+        brand: $_VEHICLE_CONFIG._BASE.brand
+        color: $_VEHICLE_CONFIG._BASE.color
+        max_speed: $_VEHICLE_CONFIG._BASE.max_speed
+        fuel_capacity: $_VEHICLE_CONFIG._BASE.fuel_capacity
 
         ` Motorcycle-specific properties `
         has_sidecar: false
