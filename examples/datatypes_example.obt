@@ -3,14 +3,14 @@
 newObject {
    nestedObject1 {
        Int: x = 1
-       String: h = "hello world"
+       Str: h = "hello world"
        Bool: y = true
        Float: i = 2.9
        Arr: j = [1, 2, 3, 4]
    }
    nestedObject2 {
        Int: x = newObject.nestedObject1.x
-       String: h = newObject.nestedObject1.h
+       Str: h = newObject.nestedObject1.h
        Bool: y = newObject.nestedObject1.y
        Float: i = newObject.nestedObject1.i
        Arr: j = newObject.nestedObject1.j
