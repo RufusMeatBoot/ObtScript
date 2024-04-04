@@ -25,20 +25,20 @@
 
 # Putting it All Together
 > ```
-> newObject {
->    nestedObject1 {
->        Int: x = 1
->        Str: h = "hello world"
->        Bool: y = true
->        Float: i = 2.9
->        Arr: j = [1, 2, 3, 4]
->    }
->    nestedObject2 {
->        Int: x = newObject.nestedObject1.x
->        Str: h = newObject.nestedObject1.h
->        Bool: y = newObject.nestedObject1.y
->        Float: i = newObject.nestedObject1.i
->        Arr: j = newObject.nestedObject1.j
->    }
+> _OBJECT {
+>     _NESTED {
+>         i_INT   : 1
+>         s_STR   : "hello world"
+>         b_BOOL  : true
+>         f_FLOAT : 2.9
+>         a_ARR   : [1, 2, 3, 4]
+>     }
+>     _NESTED {
+>         i_INT   : $_OBJECT._NESTED.i_INT
+>         s_STR   : $_OBJECT._NESTED.s_STR
+>         b_BOOL  : $_OBJECT._NESTED.b_BOOL
+>         f_FLOAT : $_OBJECT._NESTED.b_FLOAT
+>         a_ARR   : $_OBJECT._NESTED.a_ARR
+>     }
 > }
 > ```
