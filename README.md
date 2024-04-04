@@ -17,7 +17,7 @@ ObtScript offers a simple and intuitive syntax, consisting of key components:
 * Comments: Provide explanatory notes within the code.
 * Structure
 * Objects
-* Objects encapsulate related properties within a named container.
+Objects encapsulate related properties within a named container.
 
 ```
 OBJECT_NAME {
