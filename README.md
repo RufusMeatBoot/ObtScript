@@ -37,7 +37,7 @@
 >         i_INT   : $_OBJECT._NESTED.i_INT
 >         s_STR   : $_OBJECT._NESTED.s_STR
 >         b_BOOL  : $_OBJECT._NESTED.b_BOOL
->         f_FLOAT : $_OBJECT._NESTED.b_FLOAT
+>         f_FLOAT : $_OBJECT._NESTED.f_FLOAT
 >         a_ARR   : $_OBJECT._NESTED.a_ARR
 >     }
 > }
