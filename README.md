@@ -15,8 +15,12 @@ ObtScript offers a simple and intuitive syntax, consisting of key components:
 * Properties: Define attributes within objects.
 * Inheritance: Allows objects to inherit properties from other objects.
 * Comments: Provide explanatory notes within the code.
-* Structure
-* Objects
+
+#
+  
+# Structure
+
+### Objects
 
 Objects encapsulate related properties within a named container.
 
