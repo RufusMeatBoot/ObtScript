@@ -126,6 +126,30 @@ _MOTORCYCLE_CONFIG {
         is_sportbike: true
     }
 }
+
+` Sample output chart generation
+_VEHICLE_CONFIG
+|- _BASE
+|  |- brand -> "Generic Motors"
+|  |- color -> "Black"
+|  |- max_speed -> 150
+|  |- fuel_capacity -> 50
+_CAR_CONFIG
+|- _BASE
+|  |- brand -> "Generic Motors"
+|  |- color -> "Black"
+|  |- max_speed -> 150
+|  |- fuel_capacity -> 50
+|  |- num_doors -> 4
+|  |- has_sunroof -> true
+_MOTORCYCLE_CONFIG
+|- _BASE
+|  |- brand -> "Generic Motors"
+|  |- color -> "Black"
+|  |- max_speed -> 150
+|  |- fuel_capacity -> 50
+|  |- has_sidecar -> false
+|  |- is_sportbike -> true
 ```
 
 #
