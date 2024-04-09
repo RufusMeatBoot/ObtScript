@@ -50,8 +50,8 @@ Inheritance enables objects to inherit properties from other objects.
 
 ```
 OBJECT_NAME {
-    PROPERTY_1: $_PARENT_OBJECT.PROPERTY_1
-    PROPERTY_2: $_PARENT_OBJECT.PROPERTY_2
+    PROPERTY_1: $PARENT_OBJECT.PROPERTY_1
+    PROPERTY_2: $PARENT_OBJECT.PROPERTY_2
     ...
 }
 ```
@@ -88,8 +88,8 @@ OBJECT_NAME {
 
 ```
 ` Define the base configuration for a generic vehicle `
-_VEHICLE_CONFIG {
-    _BASE {
+VEHICLE_CONFIG {
+    BASE {
         brand: "Generic Motors"
         color: "Black"
         max_speed: 150
@@ -98,13 +98,13 @@ _VEHICLE_CONFIG {
 }
 
 ` Define a configuration for a car inheriting from the generic vehicle configuration `
-_CAR_CONFIG {
-    _BASE {
+CAR_CONFIG {
+    BASE {
         ` Inherit base properties from VEHICLE_CONFIG `
-        brand: $_VEHICLE_CONFIG._BASE.brand
-        color: $_VEHICLE_CONFIG._BASE.color
-        max_speed: $_VEHICLE_CONFIG._BASE.max_speed
-        fuel_capacity: $_VEHICLE_CONFIG._BASE.fuel_capacity
+        brand: $VEHICLE_CONFIG._BASE.brand
+        color: $VEHICLE_CONFIG._BASE.color
+        max_speed: $VEHICLE_CONFIG._BASE.max_speed
+        fuel_capacity: $VEHICLE_CONFIG._BASE.fuel_capacity
 
         ` Car-specific properties `
         num_doors: 4
@@ -113,13 +113,13 @@ _CAR_CONFIG {
 }
 
 ` Define a configuration for a motorcycle inheriting from the generic vehicle configuration `
-_MOTORCYCLE_CONFIG {
-    _BASE {
+MOTORCYCLE_CONFIG {
+    BASE {
         ` Inherit base properties from VEHICLE_CONFIG `
-        brand: $_VEHICLE_CONFIG._BASE.brand
-        color: $_VEHICLE_CONFIG._BASE.color
-        max_speed: $_VEHICLE_CONFIG._BASE.max_speed
-        fuel_capacity: $_VEHICLE_CONFIG._BASE.fuel_capacity
+        brand: $VEHICLE_CONFIG._BASE.brand
+        color: $VEHICLE_CONFIG._BASE.color
+        max_speed: $VEHICLE_CONFIG._BASE.max_speed
+        fuel_capacity: $VEHICLE_CONFIG._BASE.fuel_capacity
 
         ` Motorcycle-specific properties `
         has_sidecar: false
@@ -128,28 +128,28 @@ _MOTORCYCLE_CONFIG {
 }
 
 ` Sample output chart generation
-_VEHICLE_CONFIG
-|- _BASE
-|  |- brand -> "Generic Motors"
-|  |- color -> "Black"
-|  |- max_speed -> 150
-|  |- fuel_capacity -> 50
-_CAR_CONFIG
-|- _BASE
-|  |- brand -> "Generic Motors"
-|  |- color -> "Black"
-|  |- max_speed -> 150
-|  |- fuel_capacity -> 50
-|  |- num_doors -> 4
-|  |- has_sunroof -> true
-_MOTORCYCLE_CONFIG
-|- _BASE
-|  |- brand -> "Generic Motors"
-|  |- color -> "Black"
-|  |- max_speed -> 150
-|  |- fuel_capacity -> 50
-|  |- has_sidecar -> false
-|  |- is_sportbike -> true
+VEHICLE_CONFIG
+└── BASE
+    ├── brand -> "Generic Motors"
+    ├── color -> "Black"
+    ├── max_speed -> 150
+    └── fuel_capacity -> 50
+CAR_CONFIG
+└── BASE
+    ├── brand -> "Generic Motors"
+    ├── color -> "Black"
+    ├── max_speed -> 150
+    ├── fuel_capacity -> 50
+    ├── num_doors -> 4
+    └── has_sunroof -> true
+MOTORCYCLE_CONFIG
+└── BASE
+    ├── brand -> "Generic Motors"
+    ├── color -> "Black"
+    ├── max_speed -> 150
+    ├── fuel_capacity -> 50
+    ├── has_sidecar -> false
+    └── is_sportbike -> true
 ```
 
 #
