@@ -130,26 +130,26 @@ MOTORCYCLE_CONFIG {
 ` Sample output chart generation
 VEHICLE_CONFIG
 └── BASE
-    ├── brand -> "Generic Motors"
-    ├── color -> "Black"
-    ├── max_speed -> 150
-    └── fuel_capacity -> 50
+    ├── brand ➝ "Generic Motors"
+    ├── color ➝ "Black"
+    ├── max_speed ➝ 150
+    └── fuel_capacity ➝ 50
 CAR_CONFIG
 └── BASE
-    ├── brand -> "Generic Motors"
-    ├── color -> "Black"
-    ├── max_speed -> 150
-    ├── fuel_capacity -> 50
-    ├── num_doors -> 4
-    └── has_sunroof -> true
+    ├── brand ➝ "Generic Motors"
+    ├── color ➝ "Black"
+    ├── max_speed ➝ 150
+    ├── fuel_capacity ➝ 50
+    ├── num_doors ➝ 4
+    └── has_sunroof ➝ true
 MOTORCYCLE_CONFIG
 └── BASE
-    ├── brand -> "Generic Motors"
-    ├── color -> "Black"
-    ├── max_speed -> 150
-    ├── fuel_capacity -> 50
-    ├── has_sidecar -> false
-    └── is_sportbike -> true
+    ├── brand ➝ "Generic Motors"
+    ├── color ➝ "Black"
+    ├── max_speed ➝ 150
+    ├── fuel_capacity ➝ 50
+    ├── has_sidecar ➝ false
+    └── is_sportbike ➝ true
 ```
 
 #
